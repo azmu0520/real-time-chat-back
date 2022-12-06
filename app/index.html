@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Full-Stack Task Manager</title>
+    <link rel="stylesheet" href="/app/index.css" />
+    <script async src="./app.js"></script>
+  </head>
+  <body>
+    <form action="">
+      <div class="input__wrap">
+        <input
+          type="text"
+          placeholder="Create a new todo..."
+          class="main_input"
+        />
+
+        <input type="submit" hidden id="submit" />
+        <label for="submit" class="input__icon">
+          <img src="../app/icons/arrow.svg" alt="arrow" />
+        </label>
+      </div>
+      <div class="todo__body">
+        <div class="task__wrap">
+          <input type="checkbox" id="item1" hidden />
+          <label for="item1" class="task__label">
+            <div class="checked">
+              <img src="/app/icons/check.svg" alt="check" />
+            </div>
+          </label>
+          <h2 class="task__title">Task 1</h2>
+        </div>
+      </div>
+    </form>
+  </body>
+</html>

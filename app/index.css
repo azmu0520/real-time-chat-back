@@ -1,0 +1,131 @@
+@font-face {
+  font-family: 'Monda-Regular';
+  src: url(../app/fonts/Monda-Regular.ttf);
+}
+@font-face {
+  font-family: 'Monda-Light';
+  src: url(../app/fonts/Monda-Light.ttf);
+}
+
+@font-face {
+  font-family: 'Monda-Bold';
+  src: url(../app/fonts/Monda-Bold.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Monda-Regular';
+  font-style: normal;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background-color: #181824;
+}
+form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  max-width: 666px;
+  width: 100%;
+  height: fit-content;
+}
+.input__wrap {
+  display: flex;
+  position: relative;
+  width: 90%;
+}
+
+.main_input {
+  min-width: 100%;
+  height: 60px;
+  padding: 0 75px 0 30px;
+  background: #25273c;
+  border-radius: 30px;
+  border: none;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 59px;
+  letter-spacing: 0.1em;
+  color: rgba(255, 255, 255, 0.7);
+  outline: none;
+}
+
+.input__icon {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  right: 0;
+  width: 70px;
+  height: 60px;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  top: 0;
+  cursor: pointer;
+  /* transform: translateY(-50%); */
+  background: #5aff31;
+}
+
+/* Body */
+
+.todo__body {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  background-color: #25273c;
+  margin-top: 50px;
+}
+
+.task__wrap {
+  display: flex;
+  align-items: center;
+  height: 80px;
+  padding: 0 25px;
+}
+
+.task__label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid rgba(191, 86, 255, 0.79) !important;
+  width: 43px;
+  height: 43px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+#item1:checked ~ .task__label {
+  background: linear-gradient(
+    111.35deg,
+    #e600fa 10.12%,
+    rgba(82, 97, 234, 0) 82.22%
+  );
+}
+
+label .checked {
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+#item1:checked ~ label .checked {
+  opacity: 1;
+}
+
+.task__title {
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 59px;
+  letter-spacing: 0.1em;
+  color: rgba(255, 255, 255, 0.7);
+  margin-left: 26px;
+}
+
+.text__checked {
+  color: rgba(15, 144, 162, 0.57);
+  text-decoration: line-through;
+}
